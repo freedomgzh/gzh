@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="css/font_1/iconfont.css">
+    <script src = "js/require.js" defer async="true" data-main = "js/account"></script>
+    <script>
+    window.onload =function(){
+        require(["account"],function(account){
+            account.account();
+        })
+    }
+    </script>
+</head>
+<body>
+    <div id = "header_box">
+        <div id = "header" class = "cl">
+            <a href="index.html" class = "header_left"><i class = "iconfont icon-home"></i>1号店首页</a>
+            <a href="" class = "header_left"><i class="iconfont icon-iconfontzhizuobiaozhun023117"></i>送货地址 ：青岛</a>
+            <div id = header_right>
+                <div id= "top_app">
+                    <i class="iconfont icon-app"></i>
+                    <a href="">APP下载</a>
+                </div>
+                <div id = "top_customer">
+                    <a href="">客户服务</a>
+                    <i></i>
+                </div>
+                <div id = "top_order">
+                    <i class="iconfont icon-dingdan"></i>
+                    <a href="">我的订单</a>
+                </div>
+                <div id = "top_login" class = "cl">
+                    <span>hi,请</span>
+                    <a href="">登录</a>
+                    <a href="">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "cart_content">
+        <div id = "cart_header"  class = "cl">
+            <h1>
+                <a href="" class = "logo"></a>
+                <a href="" class = "logo_text"></a>
+            </h1>
+            <div id = "search">
+                <input type="text" placeholder = "请输入关键字">
+                <a href="javascript:;" ><i class = "iconfont icon-sousuo"></i></a>
+            </div>
+        </div>
+        <div id = "cart_main">
+            <div id = "cart_main_box">
+                <div id = "cart_list">
+                    <span class = "checkbox">
+                        <a href="javascript:;"><i class = "iconfont icon-duihao"></i></a>
+                        全选
+                    </span>
+                    <span class = "tit">商品信息</span>
+                    <span class = "price">单价 (元)</span>
+                    <span class = "num">数量</span>
+                    <span class = "sum">小计 (元)</span>
+                    <span class = "handle">操作</span>
+                </div>
+              
+                <div class = "cart_details">
+
+                </div>
+                <div id = "check">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

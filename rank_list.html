@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ranklist.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="css/font_1/iconfont.css">
+    <script src = "js/require.js" defer async="true" data-main = "js/rank_list"></script>
+    <script>
+    window.onload = function(){
+        require(["rank_list"],function(rank_list){
+            rank_list.rank_list();
+        })
+    }
+    </script>
+</head>
+<body>
+    <div id = "header_box">
+        <div id = "header" class = "cl">
+            <a href="index.html" class = "header_left"><i class = "iconfont icon-home"></i>1号店首页</a>
+            <a href="" class = "header_left"><i class="iconfont icon-iconfontzhizuobiaozhun023117"></i>送货地址 ：青岛</a>
+            <div id = header_right>
+                <div id= "top_app">
+                    <i class="iconfont icon-app"></i>
+                    <a href="">APP下载</a>
+                </div>
+                <div id = "top_customer">
+                    <a href="">客户服务</a>
+                    <i></i>
+                </div>
+                <div id = "top_order">
+                    <i class="iconfont icon-dingdan"></i>
+                    <a href="">我的订单</a>
+                </div>
+                <div id = "top_login" class = "cl">
+                    <span>hi,请</span>
+                    <a href="">登录</a>
+                    <a href="">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "ranking_box">
+        <div id = "ranking_top">
+            <a href="">折扣榜</a>
+            <a href="">热销榜</a>
+            <a href="">活动榜</a>
+            <a href="">热搜榜</a>
+        </div>
+        <div id = "ranking_main">
+            <div id = "ranking_nav" class = "cl">
+                <a href="">面部护肤</a>
+                <a href="">粮油调味</a>
+                <a href="">生活电器</a>
+                <a href="">洗发护发</a>
+                <a href="">清洁用品</a>
+                <a href="">休闲食品</a>
+                <a href="">进口食品</a>
+                <a href="">饮料冲调</a>
+                <a href="">女性护理</a>
+                <a href="">身体护理</a>
+            </div>
+            <div id = "rank_show" class = "cl">
+                
+            </div>
+        </div>
+
+    </div>
+    <div id = "footer_box">
+            <div id = "footer_service" class ="cl">
+                <a href="">
+                    <img src="../images/CgQI0lWskgmADBnsAAAPZvcSh3E68900.jpg" alt="">
+                    <b>正品行货</b>
+                    <span>正品行货 放心选购</span>
+                </a>
+                <a href="">
+                    <img src="../images/ChEbulWsk4iADa_aAAAM544hHN818600.jpg" alt="">
+                    <b>满86包邮</b>
+                    <span>免运费</span>
+                </a>
+                <a href="">
+                    <img src="../images/CgQIz1WslI-Adao3AAAN5b_ut2I80100.jpg" alt="">
+                    <b>售后无忧</b>
+                    <span>7天无理由退货</span>
+                </a>
+                <a href="">
+                    <img src="../images/ChEi11WsyiyALBbiAAAN9lEEK5M33200.jpg" alt="">
+                    <b>准时送达</b>
+                    <span>收货时间由你做主</span>
+                </a>    
+            </div>
+            <div id = "footer_link" class = "cl">
+                <div id = "link_left">
+                <dl>
+                    <dt><a href="">新手入门</a></dt>
+                    <dd><a href="">购物流程</a></dd>
+                    <dd><a href="">会员制度</a></dd>
+                    <dd><a href="">订单查询</a></dd>
+                    <dd><a href="">发票制度</a></dd>
+                    <dd><a href="">网站地址</a></dd>
+                </dl>
+                <dl>
+                    <dt>支付方式</dt>
+                    <dd>货到付款</dd>
+                    <dd>网上支付</dd>
+                    <dd>礼品卡支付</dd>
+                    <dd>其他支付</dd>
+                </dl>
+                <dl>
+                    <dt>配送服务</dt>
+                    <dd>配送进度查询</dd>
+                    <dd>商品验货与查收</dd>
+                </dl>
+                <dl>
+                    <dt>售后保障</dt>
+                    <dd>退换货政策</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                </div>
+                <div id = "link_right" class = "cl">
+                    <div id = "appcode">
+                        <p>APP更优惠</p>
+                        <img src="../images/qryhd.png" alt="">
+                    </div>
+                    <div id ="wechatcode">
+                        <p>加微信订单</p>
+                        <img src="../images/5a2798bbN479da3df.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id = "footer">
+                <p class = "allow">
+                    <a href="">沪ICP备16050468号</a>
+                    |
+                    <a href="">经营证照</a>
+                    |
+                    <a href="">互联网药品信息服务资格证</a>
+                    |
+                    <a href="">违法和不良信息举报电话 : 0527-88100253</a>
+                    |
+                    <a href="">沪B2-20170039</a>
+                    |
+                    <a href="">沪公安网备 31010502002939</a>
+                    |
+                    <a href="">友情链接</a>
+                </p>
+                <p class = "allowname">Copyright© 1号店网上超市 2007-2017，All Rights Reserved</p>
+                <div id = "allow_pic">
+                    <a href="">  
+                        <img src="../images/CgQCr1PQy1CAF7vaAABDexsiEYM24800.jpg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../images/ChEi1VcfPl2AC1T8AAANFrEfJlw97300.jpg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../images/ChEi2lh171KAJrGlAAALl_uZt0E75600.jpg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../images/ChEi1FYXHcOAVk_WAAAL2r2-yfo10200.jpg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../images/CgQCrlPYTqCASlHXAAAd82JE0eA31000.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "slide">
+        <!-- <div class = "slide_content"><i></i></div> -->
+        <div class = "slide_content"><i class="iconfont icon-gouwuche"></i><div>购物车</div><u id = "car_num">1</u></div>
+        <!-- <div class = "slide_content"><i></i></div> -->
+        <!-- <div class = "slide_content"><i></i></div> -->
+        <!-- <div class = "slide_content"><i></i></div> -->
+        <!-- <div class = "slide_content"><i></i></div> -->
+    </div>
+</body>
+</html>

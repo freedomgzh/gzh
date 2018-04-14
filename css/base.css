@@ -1,0 +1,41 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, input, textarea, button, select {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 12px/20px "微软雅黑";
+  color: #444; }
+
+img {
+  vertical-align: middle; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+input[type="button"], input[type="submit"], input[type="file"], input[type="reset"], button {
+  cursor: pointer; }
+
+.cl:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.cl {
+  zoom: 1; }
+
+.textoverflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.gwidth {
+  width: 1200px;
+  margin: auto; }

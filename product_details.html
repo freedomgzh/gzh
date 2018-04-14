@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product_details.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="css/font_1/iconfont.css">
+    <script src = "js/require.js" defer async="true" data-main = "js/product_details"></script>
+    <script>
+    window.onload = function(){
+        require(["product_details"],function(product_details){
+            product_details.product_details();
+        })
+    }
+    </script>
+</head>
+<body>
+    <div id = "top_box">
+        <div id = "top_navBox">
+            <div id = "top_ContainerNav">
+                <div id = "top_left">
+                    <i class="iconfont icon-iconfontzhizuobiaozhun023117"></i>
+                    <a href="">送货地址 ：青岛</a>
+                </div>
+                <div id= "top_app">
+                    <i class="iconfont icon-app"></i>
+
+                    <a href="">APP下载</a>
+                </div>
+                <div id = "top_customer">
+                    <a href="">客户服务</a>
+                    <i></i>
+                </div>
+                <div id = "top_order">
+                    <i class="iconfont icon-dingdan"></i>
+                    <a href="">我的订单</a>
+                </div>
+                <div id = "top_login">
+                    <span>hi,请</span>
+                    <a href="" class = "cl">登录</a>
+                    <a href="" class = "cl">注册</a>
+                </div>
+            </div>
+        </div>
+       
+        <div id = "top_ContainerHeader" class = "cl">
+            <div id = "header_right" class = "cl">       
+                <div id = "logobox">
+                    <a href="">
+                        <img src="images/ChEi2lj4TqGAOjXwAAAbSq83IXA88700.png" alt="">
+                    </a>
+                </div>
+                <div id = "search_box" class= "cl">
+                    <div id = "search">
+                        <div id = "input_box" class= "cl">
+                            <input type="text" placeholder = "乐事薯片 季节限定抹茶味" id = "input_search">
+                            <button type = "submit" id = "btn_search"></button>
+                            <img src="images/搜索.png" alt="">
+                        </div>
+                        <p id = "p1">
+                            <a href="">小米</a>
+                            <a href="">安幕希</a>
+                            <a href="">保鲜袋</a>
+                            <a href="">拖把</a>
+                            <a href="">牛肉干</a>
+                            <a href="">衣架</a>
+                            <a href="">洗衣液</a>
+                            <a href="">洁厕</a>
+                            <a href="">打印机</a>
+                            <a href="">玩具</a>
+                        </p>
+                    </div>
+                    <a href="" id = car>
+                        <i class="iconfont icon-gouwuche"></i>
+                        <span>购物车</span>
+                        <u id = "car_num"></u>
+                    </a>
+
+                </div>
+
+            </div>
+            <div id = "nav_box" class = "cl">
+                <div id = "list">所有商品分类
+                    <div id = "scroll_vsbox">                
+                        <div id = "sort">
+                            <ul id = "sort_ul">
+
+                            </ul>
+                        </div>  
+                    </div> 
+                </div>
+                <ul id = "header_nav" class = "cl">
+                    <li><a href="">1号抢购</a></li>
+                    <li><a href="">1号团</a></li>
+                    <li><a href="">领券中心</a></li>
+                    <li><a href="">捡便宜</a></li>
+                    <li><a href="">全球进口</a></li>
+                    <li><a href="">1号生鲜</a></li>
+                    <li><a href="">美妆馆</a></li>
+                    <li><a href="">家居馆</a></li>
+                    <li><a href="">电器城</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id = "main">
+
+
+    </div>
+</body>
+</html>

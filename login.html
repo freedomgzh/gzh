@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="css/font_1/iconfont.css">
+    <script src = "js/require.js" defer async="true" data-main = "js/login"></script>
+    <script>
+    window.onload = function(){
+        require(["login"],function(login){
+            login.login();
+        })
+    }
+    </script>
+</head>
+<body>
+    <div id = "top">
+        <div id = "top_box" class = "cl">
+            <a href="" id = "logo">
+                <img src="../images/loginlogo.jpg" alt="">
+            </a>
+            <div id = "top_left">
+                <span>
+                    您好，欢迎光临1号店！
+                    <a href="" id ="log">请登录</a>
+                 </span>  
+                 <div id = "help">
+                        <a href="" id = "help_menu"><i></i>帮助中心</a>
+                        <dl>
+                            <dd><a href="">包裹跟踪</a></dd>
+                            <dd><a href="">常见问题</a></dd>
+                            <dd><a href="">在线退换货</a></dd>
+                            <dd><a href="">在线问题</a></dd>
+                        </dl>   
+                 </div>
+            </div>
+        </div>
+    </div>
+    <div id = "login_box">
+        <div id = "login_content" class = "cl">
+            <div id ="left">
+                <div id = "left_content">
+                    <div id = "top_wrap" class = "cl">
+                        <h3>1号店用户登录</h3>
+                        <a href="register.html">注册新用户</a>
+                    </div>
+                    <!-- <form action=""> -->
+                        <div id= "form_content" class = "cl">
+                            <div class = "form_items" class = "cl">
+                                <label for = "" id = "user_icon">&nbsp</label>
+                                <input type="text" id = "user" placeholder = "邮箱/手机/用户名">  
+                            </div>
+                            <div class = "form_items" class = "cl">
+                                <label for = "" id = "password_icon">&nbsp</label>
+                                <input type="password" id = "password" placeholder ="请输入密码">
+                            </div>
+                            <div class = "auto_login">
+                                自动的登录
+                                <a href="">忘记密码</a>
+                            </div>
+                            <button id = "btn_login">登录</button>
+                        </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+            <div id = "right">
+                <a href=""><img src="../images/5acdc56cN46371895.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div id = "footer">
+        <a href="">沪ICP备16050468号</a>
+        |
+        <a href="">沪B2-20170039</a>
+        |
+        <a href="">营业执照</a>
+        <p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+    </div>
+</body>
+</html>

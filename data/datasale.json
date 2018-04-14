@@ -1,0 +1,32 @@
+{
+  "leftimg": "../images/5ac9d658N934addf0.jpg",
+  "middleimg": [
+    "../images/5ac466b2Na73df18c.jpg",
+    "../images/5ac44882N3215749a.jpg",
+    "../images/5ac47108N5738a47d.jpg"
+  ],
+  "rightimg": [
+    "../images/5acacfe4N84a0b20a.jpg",
+    "../images/598d6b06N39b2384e.jpg",
+    "../images/5a72d5b1Na0080b75.jpg",
+    "../images/5ab0aa76Nafc427a9.jpg",
+    "../images/591bb3ceN8a050554.jpg",
+    "../images/59ba3176N6f30f2d0.jpg"
+  ],
+  "pro_name": [
+    "【荷兰进口牛奶】",
+    "【澳洲燕麦片】",
+    "【伊利纯牛奶】",
+    "【安佳低脂牛奶】",
+    "【ROLLS蛋卷】",
+    "【HMILK牛奶】"
+  ],
+  "discount": [
+    0.3,
+    0.2,
+    2.5,
+    6.7,
+    5.8,
+    7.9
+  ]
+}
