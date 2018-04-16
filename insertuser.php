@@ -4,8 +4,8 @@
 
     //1、接受用户提交的学生信息 $_POST
     // print_r($_POST);
-    $name = $_POST["username"];
-    $password = $_POST["password"];
+    $username = $_POST["name"];
+    $userpassword = $_POST["password"];
     // $stuChinese = $_POST["stuChinese"];
     // $stuEnglish = $_POST["stuEnglish"];
     // $stuMath = $_POST["stuMath"];
@@ -33,13 +33,13 @@
     mysql_select_db("yhd");
 
     //4、拼接sql语句
-    $sql = "INSERT INTO user VALUES('$name','$password');";
+    $sql = "INSERT INTO user VALUES('$username','$userpassword');";
 
     //5、把sql语句发送给dbms，执行得到结果
     $is_ok = mysql_query($sql);
 
     if($is_ok){
-        echo "<br/>恭喜你注册成功";
+        echo "恭喜你注册成功";
     }else{
         echo "注册失败";
     }

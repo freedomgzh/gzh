@@ -5,7 +5,7 @@ require.config({
 	paths: {
 		jquery: "jquery-1.10.1.min",
 		"jquery-cookie": "jquery.cookie",
-		index : "index",
+		index : "index1",
 		"btnTop_move": "btnTop_move",
 		"parabola": "parabola"
 	},
@@ -20,7 +20,7 @@ require.config({
 		}
 	}
 })
-define(["index"],function(index){
+define(["index1"],function(index){
 	var main = function(){
 		
 		index.index();

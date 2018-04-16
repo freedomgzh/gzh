@@ -1,13 +1,11 @@
       
-define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,btnTop_move,scroll,scroll_list,pic_move){
+define(["jquery","btnTop_move","scroll","scroll_list","pic_move","jquery-cookie"], function($,btnTop_move,scroll,scroll_list,pic_move){
     var index = function(){
         btnTop_move.btnTop_move();
-        // alert(0)
         $.ajax({
             url:"../data/data.json",
             type:"GET",
             success:function(res){
-                // alert(res)
                 var html = "";
                 for(var i = 0; i < res.length; i++){
                     html += `<li class = "banner_li" ><div class = "banner_div"><img src="` + res[i].img + `" alt="">
@@ -31,7 +29,6 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
             url:"../data/datasort.json",
             type:"GET",
             success:function(res){
-                // alert(res[0].name);
                 var html = "";
                 var html1 = "";
                 var html2 = "";
@@ -45,16 +42,11 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                             for(var g = 0; g < res[i].list.length; g++){
                                 for(var k = 0; k < res[i].list[g].length; k++){
                                     html4 += `<a>${res[i].list[g][k]}</a>`;
-
                                 }
                                 html3 = `${html4}`;
                                 html4 = "";
                                 html2 += `<dl id = "dlbox" class = "cl"><dt><a id = "">${res[i].name[g]}</a><i>></i></dt><dd>${html3}</dd></dl>`
-                            }
-                           
-            
-                       
-                        // html3 =""      
+                            }                           
                     html += `<li><h3><i id = "icont" class = "iconfont ${res[i].classname}"></i>${html1}</h3><div class = "div1"><div class = "div2">${html2}</div></div></li>` ;
                     html1 = "";
                     html2 ="";
@@ -63,7 +55,7 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                 $("#sort_ul").html(html)
             },
             error:function(obj,error){
-                alert(error)
+                // alert(error)
             }
         });
         $.ajax({
@@ -71,14 +63,13 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
             type:"GET",
             success:function(res){
                 var html="";
-                // alert(res[0].price)
                 for(var i = 0; i < res.length; i++){
                     html += `<li><div id = "right_line"></div><a class = "cl"><div id= "pro_detail"><p class= "pro_name">${res[i].name}</p><p class= "pro_price">${res[i].pro_price}</p><p class = "refrence-price">${res[i].refrence_price}</p></div><img src = "${res[i].img}"></a></li>`
                 }
                 $("#seckill_ul").html(html);
             },
             error:function(obj,error){
-                alert(error);
+                // alert(error);
             }
         })
 
@@ -91,8 +82,6 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                 var content = "";
                 var number = "";
                 var inumber = null;
-                // alert(res.middleimg)
-                // alert(res.middleimg[1])
                 var group_today = res.middleimg[0];
                 var group_v = res.middleimg[1];
                 var group_b = res.middleimg[2];
@@ -111,7 +100,7 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                 $("#brand_sale").html(html)
             },
             error:function(obj,error){
-                alert(error);
+                // alert(error);
             }
         });
         $.ajax({
@@ -123,8 +112,6 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                 var brand_right_list = "";
                 var brand_right_list_new = "";
                 var brand_bottom_list = "";
-                // var group_today = res.middleimg[0];
-                // var group_left = res.rightimg[0];
                 for(var i = 0; i < res.middleimg.length; i++){
                     brand_right_list += `<li><a><p class = "pro_tit">${res.pro_name[i]}</p><p class = "pro_sub">${res.pro_tit[i]}</p><img src = "${res.middleimg[i]}"></a></li>`
                 }
@@ -140,15 +127,18 @@ define(["jquery","btnTop_move","scroll","scroll_list","pic_move"], function($,bt
                 $("#brand_sale_new").html(html);
             },
             error:function(obj,error){
-                alert(error);
+                // alert(error);
             }
-        })
-        // pic_move.pic_move();
+        });
         var str = $.cookie("login");
-        if(str = "zzz"){
-            $("#top_login").html("<a>欢迎回来" + str + "</a>")
+        if(str){
+            $("#login_box p").html(`你好~${str}`)
+            $("#top_login").html("<a>欢迎回来" + str + "</a><a href = 'javascript:;' id = 'quit'>退出</a>")
+            $("#quit").click(function(){
+                $.cookie("login",null);
+                location.reload();
+            })
         }
-
     }
 	return {
 		index:index

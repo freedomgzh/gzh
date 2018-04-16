@@ -34,7 +34,7 @@ define(["jquery","jquery-cookie"],function($){
                     }
                     count = i + 1;
                     if(i == 0){
-                        html = `<div class = "list${res[i].id} list_box"><i>${res[i].id}</i><a href = "product_details.html?${res[i].id}"><img src = ${res[i].img}></a><div class = "left_box"><p>${res[i].title}</p><div id = "price_box"><div class = "price"><span><em>${res[i].discount}</em>折</span></div><div class = "average_box"><div class = "average_price">参考价： ${res[i].average_price}</div></div><div class = "car_btn">加入购物车</div></div></div></div>`
+                        html = `<div class = "list${res[i].id} list_box"><i>${res[i].id}</i><a href = "product_details.html?${res[i].id}"><img src = ${res[i].img}></a><div class = "left_box"><p>${res[i].title}</p><div id = "price_box" class = "pric1"><div class = "price"><span><em>${res[i].discount}</em>折</span></div><div class = "average_box"><div class = "average_price">参考价： ${res[i].average_price}</div></div><div class = "car_btn">加入购物车</div></div></div></div>`
                     }else {
                         html += `<div class = "list${count} list_box"><i>${res[i].id}</i><a href = "product_details.html?${res[i].id}"><img src = ${res[i].img}></a><p>${res[i].title}</p><div id = "price_box"><div class = "price"><span><em>${res[i].discount}</em>折</span></div><div class = "average_box"><div class = "average_price">参考价： ${res[i].average_price}</div></div></div><div class = "car_btn">加入购物车</div></div>`
 
@@ -47,22 +47,16 @@ define(["jquery","jquery-cookie"],function($){
             }
         });
         $("#rank_show").on("click",".car_btn",function(){
-            // var id = location.search.substring(1);
-            // alert(id);
-            // alert(1)
-            // var id = this.id;
-            // alert(id);
+            // alert(1);
             var id = $(this).parent().attr("class").substring(4,5);
-            // alert($(this).parent().attr("class").substring(4,5))
+            alert(id);
             var first = $.cookie("goods") == null ? true : false;
             if(first){
-                //第一次添加  [{id:id,num:2}]
                 $.cookie("goods", '[{id:' + id + ',num:1}]', {
                     expires: 7
                 });
             }else{
                 var str = $.cookie("goods");
-                // alert(str)
                 var arr = eval(str);
                 var same = false; //代表是否有相同商品
 

@@ -35,6 +35,7 @@ define(["jquery","jquery-cookie"],function(){
                     var num = res[arr[i].id].price.substring(1)
                     sumcount += arr[i].num;
                     sumprice += arr[i].num * num;
+
                     html += `                    
                     <div class = "details_box">
                         <ul>
@@ -80,15 +81,16 @@ define(["jquery","jquery-cookie"],function(){
                 }
                 $(".cart_details").html(html);
                 $("#check").html(htmlfooter);
-                $(".delete").cilck(function(){
-                    
+                $("#cart_details").on("click",".delete",function(){
+                    // alert(1);
+                    $.cookie("goods")
                 })
             },
             error:function(obj,error){
                 alert(error);
             }
         })
-        $()
+
         // $.ajax({
         //     url:"../data/dataranklist.json",
         //     type:"GET",

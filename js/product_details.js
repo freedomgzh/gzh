@@ -57,7 +57,7 @@ define(["jquery","jquery-cookie"],function($){
                 $("#sort_ul").html(html)
             },
             error:function(obj,error){
-                alert(error)
+                // alert(error)
             }
         });
         $.ajax({
@@ -157,7 +157,7 @@ define(["jquery","jquery-cookie"],function($){
 
             },
              error:function(obj,error){
-                alert(error)
+                // alert(error)
         }
         });
         $("#main").on("click","#btn_car",function(){
